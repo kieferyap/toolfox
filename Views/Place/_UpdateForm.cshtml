@@ -1,0 +1,63 @@
+@model PlaceViewModel
+
+<form asp-action="Update" 
+  id="form-action" 
+  method="post" 
+  class="form-horizontal" 
+  role="form"
+>
+  <div asp-validation-summary="All" class="text-danger"></div>
+
+  <!-- Title -->
+  <div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+      <label asp-for="Place.Title" class="form-label"></label>
+      <input asp-for="Place.Id" type="hidden" class="form-control" />
+      <input asp-for="Place.Title" class="form-control" />
+      <span asp-validation-for="Place.Title" class="text-danger" />
+    </div>
+  </div>
+
+  <!-- Website -->
+  <div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+      <label asp-for="Place.Website" class="form-label"></label>
+      <input asp-for="Place.Website" class="form-control" />
+      <span asp-validation-for="Place.Website" class="text-danger" />
+    </div>
+  </div>
+
+  <!-- Type -->
+  <div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+      <label asp-for="Place.Type" class="form-label"></label>
+      <select class="form-select" asp-for="Place.Type">
+        <option selected value="🧳 General">🧳 General</option>
+        <option value="🐶 Animals">🐶 Animals</option>
+        <option value="🎨 Art">🎨 Art</option>
+        <option value="🍜 Food">🍜 Food</option>
+        <option value="🎮 Games">🎮 Games</option>
+        <option value="⛰️ Hiking">⛰️ Hiking</option>
+        <option value="⛩ Temple">⛩ Temple</option>
+        <option value="✨ Others">✨ Others</option>
+      </select>
+      <span asp-validation-for="Place.Type" class="text-danger" />
+    </div>
+  </div>
+
+  <!-- Notes -->
+  <div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+      <label asp-for="Place.Notes" class="form-label"></label>
+      <textarea asp-for="Place.Notes" class="form-control" rows="5" cols="40"></textarea>
+      <span asp-validation-for="Place.Notes" class="text-danger" />
+    </div>
+  </div>
+
+  <!-- Submit -->
+  <div class="row justify-content-center">
+    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
+      <input type="submit" id="form-button" class="btn btn-outline-success" value="Submit" />
+    </div>
+  </div>
+</form>

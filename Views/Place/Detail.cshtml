@@ -1,0 +1,10 @@
+@model PlaceViewModel
+
+<div class="place mt-3">
+  <h2>@Model.Place.Title</h2>
+  <h5>@Model.Place.Type</h5>
+  <a href="@Model.Place.Website">@Model.Place.Website</a>
+  <p>@Model.Place.Notes</p>
+  <span class="text-secondary">Created @Model.Place.CreatedAt</span><br/>
+  <span class="text-secondary">Updated @Model.Place.UpdatedAt</span>
+</div>

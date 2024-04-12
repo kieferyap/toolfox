@@ -1,0 +1,45 @@
+@model PlaceViewModel
+@{
+  ViewData["Title"] = "Places";
+}
+
+<div class="text-center">
+  <h1 class="display-4">Tokyo Tourist Spots</h1>
+  <p>A list of my personal recommendations for Tokyo.</p>
+</div>
+
+<div class="text-right">
+  <a asp-controller="Place" asp-action="New">Add New</a>
+</div>
+
+<div class="place-controller">
+  <div class="row">
+    @foreach (var place in Model.PlaceList)
+    {
+      <div class="place col-xl-6 col-lg-6 col-sm-10 mt-5">
+        <h2>
+          <a href="@place.Website" target="_blank">
+            @place.Title
+          </a>
+        </h2>
+        <h5>@place.Type</h5>
+        <p>@place.Notes</p>
+        <a 
+          class="btn btn-outline-secondary"
+          asp-area="" 
+          asp-controller="Place" 
+          asp-action="Edit"
+          asp-route-id="@place.Id"
+        >
+          <i class="bi bi-pen"></i>
+        </a>
+        <a
+          class="btn btn-outline-secondary"
+          onClick="deletePlace(@place.Id)"
+        >
+          <i class="bi bi-trash"></i>
+        </a>
+      </div>
+    }
+  </div>
+</div>
