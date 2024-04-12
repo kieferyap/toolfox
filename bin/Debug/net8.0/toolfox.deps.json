@@ -14,10 +14,9 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.4",
+          "QuestPDF": "2202.8.2",
           "SQLite": "3.13.0",
           "Swashbuckle.AspNetCore": "6.5.0",
-          "Syncfusion.Pdf.Net.Core": "25.1.39",
-          "Syncfusion.Pdf.WinForms": "25.1.39",
           "System.Configuration.ConfigurationManager": "8.0.0"
         },
         "runtime": {
@@ -74,6 +73,39 @@
           "lib/netstandard2.1/EntityFramework.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.400.420.21404"
+          }
+        }
+      },
+      "HarfBuzzSharp/2.6.1.9": {
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/HarfBuzzSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.6.1.9"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libHarfBuzzSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/libHarfBuzzSharp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -660,6 +692,18 @@
           }
         }
       },
+      "QuestPDF/2202.8.2": {
+        "dependencies": {
+          "SkiaSharp": "2.80.4",
+          "SkiaSharp.HarfBuzz": "2.80.4"
+        },
+        "runtime": {
+          "lib/net6.0/QuestPDF.dll": {
+            "assemblyVersion": "2202.8.2.0",
+            "fileVersion": "2202.8.2.0"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "dependencies": {
           "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
@@ -691,6 +735,51 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "SkiaSharp/2.80.4": {
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkiaSharp.dll": {
+            "assemblyVersion": "2.80.0.0",
+            "fileVersion": "2.80.4.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/2.80.4": {
+        "dependencies": {
+          "HarfBuzzSharp": "2.6.1.9",
+          "SkiaSharp": "2.80.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
+            "assemblyVersion": "2.80.0.0",
+            "fileVersion": "2.80.4.0"
           }
         }
       },
@@ -891,55 +980,6 @@
           "lib/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "assemblyVersion": "6.5.0.0",
             "fileVersion": "6.5.0.0"
-          }
-        }
-      },
-      "Syncfusion.Compression.Base/25.1.39": {
-        "runtime": {
-          "lib/net40/Syncfusion.Compression.Base.dll": {
-            "assemblyVersion": "25.1400.39.0",
-            "fileVersion": "25.1400.39.0"
-          }
-        }
-      },
-      "Syncfusion.Compression.Net.Core/25.1.39": {
-        "runtime": {
-          "lib/net8.0/Syncfusion.Compression.Portable.dll": {
-            "assemblyVersion": "25.1.39.0",
-            "fileVersion": "25.1.39.0"
-          }
-        }
-      },
-      "Syncfusion.Licensing/25.1.39": {
-        "runtime": {
-          "lib/net8.0/Syncfusion.Licensing.dll": {
-            "assemblyVersion": "25.1.39.0",
-            "fileVersion": "25.1.39.0"
-          }
-        }
-      },
-      "Syncfusion.Pdf.Net.Core/25.1.39": {
-        "dependencies": {
-          "Syncfusion.Compression.Net.Core": "25.1.39",
-          "Syncfusion.Licensing": "25.1.39",
-          "System.Text.Encoding.CodePages": "6.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/Syncfusion.Pdf.Portable.dll": {
-            "assemblyVersion": "25.1.39.0",
-            "fileVersion": "25.1.39.0"
-          }
-        }
-      },
-      "Syncfusion.Pdf.WinForms/25.1.39": {
-        "dependencies": {
-          "Syncfusion.Compression.Base": "25.1.39",
-          "Syncfusion.Licensing": "25.1.39"
-        },
-        "runtime": {
-          "lib/net40/Syncfusion.Pdf.Base.dll": {
-            "assemblyVersion": "25.1400.39.0",
-            "fileVersion": "25.1400.39.0"
           }
         }
       },
@@ -1195,6 +1235,13 @@
       "sha512": "sha512-yj1+/4tci7Panu3jKDHYizxwVm0Jvm7b7m057b5h4u8NUHGCR8WIWirBTw+8EptRffwftIWPBeIRGNKD1ewEMQ==",
       "path": "entityframework/6.4.4",
       "hashPath": "entityframework.6.4.4.nupkg.sha512"
+    },
+    "HarfBuzzSharp/2.6.1.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yx6dCVHTMn25r7z5oBfJxiXN/MUhk25rw0YZxv1g3cwXk3qtvGD/oJP5t9undelpjVXw+IJA4bd1AquOLXmLdw==",
+      "path": "harfbuzzsharp/2.6.1.9",
+      "hashPath": "harfbuzzsharp.2.6.1.9.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1511,6 +1558,13 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
+    "QuestPDF/2202.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eBPv+ofiy6mxjW4JYTJLHW+Uo6hSVXQmCvQUSXv4yfiIT3zljx/0oGJvE2o3QvP1j5Q+JH9JCSCUeJlNLAaW3w==",
+      "path": "questpdf/2202.8.2",
+      "hashPath": "questpdf.2202.8.2.nupkg.sha512"
+    },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -1538,6 +1592,20 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SkiaSharp/2.80.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lVzAGA969C2Taxpf1wg17PODiYDTk2hnMWBu1bPrjftNxuO+hCPIFgrieMBI6NpiHuF1ahCIMlS+CTw0NwjVnA==",
+      "path": "skiasharp/2.80.4",
+      "hashPath": "skiasharp.2.80.4.nupkg.sha512"
+    },
+    "SkiaSharp.HarfBuzz/2.80.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Beok7PChz8M2Iz3xo0Bzuj6Whw7zT6GfVTJQIIQLH1ycfrIM4XEXgiQLYViGBwwDDpalUCSxkk/Ccxp+5YAtaQ==",
+      "path": "skiasharp.harfbuzz/2.80.4",
+      "hashPath": "skiasharp.harfbuzz.2.80.4.nupkg.sha512"
     },
     "SQLite/3.13.0": {
       "type": "package",
@@ -1601,41 +1669,6 @@
       "sha512": "sha512-OvbvxX+wL8skxTBttcBsVxdh73Fag4xwqEU2edh4JMn7Ws/xJHnY/JB1e9RoCb6XpDxUF3hD9A0Z1lEUx40Pfw==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.5.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
-    },
-    "Syncfusion.Compression.Base/25.1.39": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-571a57cQ+/B44/+ulZUSyKhgDF0uwU3KNh2IIQaiByWZgFZ0G3NHfeINe77xwtTi8OcNzYV5hiJu6Lu2y1WRpg==",
-      "path": "syncfusion.compression.base/25.1.39",
-      "hashPath": "syncfusion.compression.base.25.1.39.nupkg.sha512"
-    },
-    "Syncfusion.Compression.Net.Core/25.1.39": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-4C+iYih1O/jsq86yFpTA2eFJf4v62N8esezWJIPA7UPR9u/cUO4qcx1jYaN4VXm9sRcRBxbwY3M1FC7FxubT0A==",
-      "path": "syncfusion.compression.net.core/25.1.39",
-      "hashPath": "syncfusion.compression.net.core.25.1.39.nupkg.sha512"
-    },
-    "Syncfusion.Licensing/25.1.39": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-i8krFQ2ElmL27dOwoPwwi8BZBX9hxaVgXVeVQZMvHp/U5k9Pn0UDp7/edzDkLmsIQFZHXx1J56VxR+4T+UKarA==",
-      "path": "syncfusion.licensing/25.1.39",
-      "hashPath": "syncfusion.licensing.25.1.39.nupkg.sha512"
-    },
-    "Syncfusion.Pdf.Net.Core/25.1.39": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-l53/b7nEni/R4r0Ewh8jchnFP8raq3qB1tbdkOisbRbN+xOjUkwz2+ncchsuysMXTB/QMoLBcZX0pzjy9jT+Kw==",
-      "path": "syncfusion.pdf.net.core/25.1.39",
-      "hashPath": "syncfusion.pdf.net.core.25.1.39.nupkg.sha512"
-    },
-    "Syncfusion.Pdf.WinForms/25.1.39": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-a3tkv3JA+qPZ1ORDki9QmXgarUBk6URBjEFV7ALsrkTFwhhY/2JsqTQ6ejmiDMvVevqAajGtsGjZzPKQ/r6gEA==",
-      "path": "syncfusion.pdf.winforms/25.1.39",
-      "hashPath": "syncfusion.pdf.winforms.25.1.39.nupkg.sha512"
     },
     "System.CodeDom/4.7.0": {
       "type": "package",

@@ -12,6 +12,28 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+/* Flashcards */
+@font-face {
+  font-family: "Nara Penmanship Lined";
+  src: url("../fonts/nara-penmanship-lined.ttf");
+}
+
+@font-face {
+  font-family: "WeCan Handwriting Medium";
+  src: url("../fonts/we-can-unlined.otf");
+}
+
+.flashcard-label-lined{
+  font-family: 'Nara Penmanship Lined';
+  font-size: 3.5em;
+}
+
+.flashcard-label-unlined{
+  font-family: 'WeCan Handwriting Medium';
+}
+
+/* Full */
+
 html {
   position: relative;
   min-height: 100%;

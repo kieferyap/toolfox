@@ -42,11 +42,6 @@ D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\SQLitePCLRaw.provider.e
 D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\Syncfusion.Compression.Base.dll
-D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\Syncfusion.Compression.Portable.dll
-D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\Syncfusion.Licensing.dll
-D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\Syncfusion.Pdf.Portable.dll
-D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\Syncfusion.Pdf.Base.dll
 D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\System.CodeDom.dll
 D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -173,3 +168,15 @@ D:\dragonite-files\code\toolfox\toolfox\obj\Debug\net8.0\refint\toolfox.dll
 D:\dragonite-files\code\toolfox\toolfox\obj\Debug\net8.0\toolfox.pdb
 D:\dragonite-files\code\toolfox\toolfox\obj\Debug\net8.0\toolfox.genruntimeconfig.cache
 D:\dragonite-files\code\toolfox\toolfox\obj\Debug\net8.0\ref\toolfox.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\HarfBuzzSharp.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\QuestPDF.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\SkiaSharp.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\SkiaSharp.HarfBuzz.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\dragonite-files\code\toolfox\toolfox\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll

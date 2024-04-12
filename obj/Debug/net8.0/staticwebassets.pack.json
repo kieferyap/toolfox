@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\fonts\\nara-penmanship-lined.ttf",
+      "PackagePath": "staticwebassets\\fonts\\nara-penmanship-lined.ttf"
+    },
+    {
+      "Id": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\fonts\\we-can-unlined.otf",
+      "PackagePath": "staticwebassets\\fonts\\we-can-unlined.otf"
+    },
+    {
+      "Id": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\images\\no-image.png",
+      "PackagePath": "staticwebassets\\images\\no-image.png"
+    },
+    {
       "Id": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\images\\toolfox.png",
       "PackagePath": "staticwebassets\\images\\toolfox.png"
     },
