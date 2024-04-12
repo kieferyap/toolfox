@@ -1253,6 +1253,76 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Syncfusion.Compression.Base/25.1.39": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Syncfusion.Compression.Base.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/Syncfusion.Compression.Base.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Compression.Net.Core/25.1.39": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Compression.Portable.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Compression.Portable.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/25.1.39": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Pdf.Net.Core/25.1.39": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Compression.Net.Core": "25.1.39",
+          "Syncfusion.Licensing": "25.1.39",
+          "System.Text.Encoding.CodePages": "4.4.0"
+        },
+        "compile": {
+          "lib/net8.0/Syncfusion.Pdf.Portable.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Pdf.Portable.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Pdf.WinForms/25.1.39": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Compression.Base": "25.1.39",
+          "Syncfusion.Licensing": "25.1.39"
+        },
+        "compile": {
+          "lib/net40/Syncfusion.Pdf.Base.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/Syncfusion.Pdf.Base.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.CodeDom/4.7.0": {
         "type": "package",
         "compile": {
@@ -3906,6 +3976,113 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
+    "Syncfusion.Compression.Base/25.1.39": {
+      "sha512": "571a57cQ+/B44/+ulZUSyKhgDF0uwU3KNh2IIQaiByWZgFZ0G3NHfeINe77xwtTi8OcNzYV5hiJu6Lu2y1WRpg==",
+      "type": "package",
+      "path": "syncfusion.compression.base/25.1.39",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net40/Syncfusion.Compression.Base.dll",
+        "lib/net40/Syncfusion.Compression.Base.xml",
+        "lib/net462/Syncfusion.Compression.Base.dll",
+        "lib/net462/Syncfusion.Compression.Base.xml",
+        "lib/net6.0-windows7.0/Syncfusion.Compression.Base.dll",
+        "lib/net6.0-windows7.0/Syncfusion.Compression.Base.xml",
+        "syncfusion.compression.base.25.1.39.nupkg.sha512",
+        "syncfusion.compression.base.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Compression.Net.Core/25.1.39": {
+      "sha512": "4C+iYih1O/jsq86yFpTA2eFJf4v62N8esezWJIPA7UPR9u/cUO4qcx1jYaN4VXm9sRcRBxbwY3M1FC7FxubT0A==",
+      "type": "package",
+      "path": "syncfusion.compression.net.core/25.1.39",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net6.0/Syncfusion.Compression.Portable.dll",
+        "lib/net6.0/Syncfusion.Compression.Portable.xml",
+        "lib/net7.0/Syncfusion.Compression.Portable.dll",
+        "lib/net7.0/Syncfusion.Compression.Portable.xml",
+        "lib/net8.0/Syncfusion.Compression.Portable.dll",
+        "lib/net8.0/Syncfusion.Compression.Portable.xml",
+        "lib/netstandard2.0/Syncfusion.Compression.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.Compression.Portable.xml",
+        "syncfusion.compression.net.core.25.1.39.nupkg.sha512",
+        "syncfusion.compression.net.core.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Licensing/25.1.39": {
+      "sha512": "i8krFQ2ElmL27dOwoPwwi8BZBX9hxaVgXVeVQZMvHp/U5k9Pn0UDp7/edzDkLmsIQFZHXx1J56VxR+4T+UKarA==",
+      "type": "package",
+      "path": "syncfusion.licensing/25.1.39",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net462/Syncfusion.Licensing.dll",
+        "lib/net6.0/Syncfusion.Licensing.dll",
+        "lib/net7.0/Syncfusion.Licensing.dll",
+        "lib/net8.0/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.25.1.39.nupkg.sha512",
+        "syncfusion.licensing.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Pdf.Net.Core/25.1.39": {
+      "sha512": "l53/b7nEni/R4r0Ewh8jchnFP8raq3qB1tbdkOisbRbN+xOjUkwz2+ncchsuysMXTB/QMoLBcZX0pzjy9jT+Kw==",
+      "type": "package",
+      "path": "syncfusion.pdf.net.core/25.1.39",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net6.0/Syncfusion.Pdf.Portable.dll",
+        "lib/net6.0/Syncfusion.Pdf.Portable.xml",
+        "lib/net7.0/Syncfusion.Pdf.Portable.dll",
+        "lib/net7.0/Syncfusion.Pdf.Portable.xml",
+        "lib/net8.0/Syncfusion.Pdf.Portable.dll",
+        "lib/net8.0/Syncfusion.Pdf.Portable.xml",
+        "lib/netstandard2.0/Syncfusion.Pdf.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.Pdf.Portable.xml",
+        "syncfusion.pdf.net.core.25.1.39.nupkg.sha512",
+        "syncfusion.pdf.net.core.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Pdf.WinForms/25.1.39": {
+      "sha512": "a3tkv3JA+qPZ1ORDki9QmXgarUBk6URBjEFV7ALsrkTFwhhY/2JsqTQ6ejmiDMvVevqAajGtsGjZzPKQ/r6gEA==",
+      "type": "package",
+      "path": "syncfusion.pdf.winforms/25.1.39",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net40/Syncfusion.Pdf.Base.dll",
+        "lib/net40/Syncfusion.Pdf.Base.xml",
+        "lib/net462/Syncfusion.Pdf.Base.dll",
+        "lib/net462/Syncfusion.Pdf.Base.xml",
+        "lib/net6.0-windows7.0/Syncfusion.Pdf.Base.dll",
+        "lib/net6.0-windows7.0/Syncfusion.Pdf.Base.xml",
+        "syncfusion.pdf.winforms.25.1.39.nupkg.sha512",
+        "syncfusion.pdf.winforms.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
     "System.CodeDom/4.7.0": {
       "sha512": "Hs9pw/kmvH3lXaZ1LFKj3pLQsiGfj2xo3sxSzwiLlRL6UcMZUTeCfoJ9Udalvn3yq5dLlPEZzYegrTQ1/LhPOQ==",
       "type": "package",
@@ -5239,6 +5416,8 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.4",
       "SQLite >= 3.13.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
+      "Syncfusion.Pdf.Net.Core >= 25.1.39",
+      "Syncfusion.Pdf.WinForms >= 25.1.39",
       "System.Configuration.ConfigurationManager >= 8.0.0"
     ]
   },
@@ -5316,6 +5495,14 @@
             "target": "Package",
             "version": "[6.5.0, )"
           },
+          "Syncfusion.Pdf.Net.Core": {
+            "target": "Package",
+            "version": "[25.1.39, )"
+          },
+          "Syncfusion.Pdf.WinForms": {
+            "target": "Package",
+            "version": "[25.1.39, )"
+          },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
             "version": "[8.0.0, )"
@@ -5343,5 +5530,27 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Syncfusion.Compression.Base 25.1.39' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Syncfusion.Compression.Base",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Syncfusion.Pdf.WinForms 25.1.39' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Syncfusion.Pdf.WinForms",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
