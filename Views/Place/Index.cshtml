@@ -8,9 +8,9 @@
   <p>A list of my personal recommendations for Tokyo.</p>
 </div>
 
-<div class="text-right">
+@* <div class="text-right">
   <a asp-controller="Place" asp-action="New">Add New</a>
-</div>
+</div> *@
 
 <div class="place-controller">
   <div class="row">
@@ -24,7 +24,7 @@
         </h2>
         <h5>@place.Type</h5>
         <p>@place.Notes</p>
-        <a 
+        @* <a 
           class="btn btn-outline-secondary"
           asp-area="" 
           asp-controller="Place" 
@@ -38,7 +38,7 @@
           onClick="deletePlace(@place.Id)"
         >
           <i class="bi bi-trash"></i>
-        </a>
+        </a> *@
       </div>
     }
   </div>

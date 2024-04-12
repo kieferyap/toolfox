@@ -36,6 +36,7 @@ public class PlaceController : Controller
 
   public IActionResult Detail(int id)
   {
+    return RedirectToAction(nameof(Index));
     var place = GetPlaceById(id);
     var placeViewModel = new PlaceViewModel{Place = place};
     return View(placeViewModel);
@@ -43,6 +44,7 @@ public class PlaceController : Controller
 
   public IActionResult Edit(int id)
   {
+    return RedirectToAction(nameof(Index));
     var place = GetPlaceById(id);
     var placeViewModel = new PlaceViewModel{Place = place};
     return View(placeViewModel);
@@ -51,6 +53,7 @@ public class PlaceController : Controller
   [HttpPost]
   public JsonResult Delete(int id)
   {
+    return Json(new Object{});
     // Connect to the DB (ASP will autoclean apparently)
     using (SqliteConnection connection = new SqliteConnection(_configuration.GetConnectionString("ToolfoxDataContext")))
     {
@@ -75,6 +78,7 @@ public class PlaceController : Controller
   // See PlaceApiController.cs
   public ActionResult Insert(PlaceModel place)
   {
+    return RedirectToAction(nameof(Index));
     place.CreatedAt = DateTime.Now;
     place.UpdatedAt = DateTime.Now;
 
@@ -179,6 +183,7 @@ public class PlaceController : Controller
 
   public ActionResult Update(PlaceModel place)
   {
+    return RedirectToAction(nameof(Index));
     place.UpdatedAt = DateTime.Now;
     
     // Connect to the DB
