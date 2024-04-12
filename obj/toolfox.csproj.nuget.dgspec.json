@@ -67,6 +67,10 @@
               "target": "Package",
               "version": "[8.0.4, )"
             },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2202.8.2, )"
+            },
             "SQLite": {
               "target": "Package",
               "version": "[3.13.0, )"
@@ -74,14 +78,6 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
-            },
-            "Syncfusion.Pdf.Net.Core": {
-              "target": "Package",
-              "version": "[25.1.39, )"
-            },
-            "Syncfusion.Pdf.WinForms": {
-              "target": "Package",
-              "version": "[25.1.39, )"
             },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",

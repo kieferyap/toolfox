@@ -1,63 +1,102 @@
 @{
-    ViewData["Title"] = "Flashcard";
+  ViewData["Title"] = "Flashcard";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Flashcard Generator</h1>
-    <p>A tool to generate flashcards. Note: PDF generation not working yet!</p>
+  <h1 class="display-4">Flashcard Generator</h1>
+  <p>A tool to generate flashcards for ALTs and English teachers. <br/> Frontend is done but Backend is still a WIP and can only output the label.</p>
 </div>
 
-@* <img id="preview-flashcard-image" src="#" alt="Your image previews here" /> *@
-
-<form
-  id="form-action" 
-  method="post" 
-  class="form-horizontal" 
-  role="form"
->
-  <!-- Image -->
-  <div class="row justify-content-center">
-    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
-      <label class="form-label">Image</label>
-      <input class="form-control" type="file" id="flashcard-image" name="image" onchange="flashcardImageUpdate()">
+<div class="row mt-5">
+  <!-- Flashcard preview -->
+  <div class="col-xl-6 col-lg-6 col-sm-12">
+    <div class="text-center p-4">
+      <div class="row justify-content-center">
+        <img src="#" id="preview-flashcard-image-sm" class="w-75 d-block d-md-none"
+          onerror="this.src='/images/no-image.png'"
+          alt="(If you select an image in the form below, it will preview here.)" />
+        <img src="#" id="preview-flashcard-image-md" class="w-75 d-none d-md-block"
+          onerror="this.src='/images/no-image.png'"
+          alt="(If you select an image in the form below, it will preview here.)" />
+      </div>
+      <div id="preview-flashcard-label-parent" class="row justify-content-center mt-3">
+        <h1 id="preview-flashcard-label" class="flashcard-label-lined">Untitled</h1>
+      </div>
     </div>
   </div>
 
-  <!-- Label -->
-  <div class="row justify-content-center mt-2">
-    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
-      <label class="form-label">Label</label>
-      <input class="form-control" />
-    </div>
-  </div>
+  <!-- Flashcard input form -->
+  <div class="col-xl-6 col-lg-6 col-sm-12">
+    <form asp-action="Generate" method="post" id="form-action" class="form-horizontal" role="form">
+      <!-- Image -->
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <label class="form-label">Image</label>
+          <input class="form-control d-none" id="flashcard-image-data-url" name="imageurl" placeholder="imageurl" />
+          <input class="form-control" type="file" accept="image/png, image/jpeg, image/jpg" id="flashcard-image" name="image" onchange="flashcardImageUpdate()">
+        </div>
+      </div>
 
-  <!-- Type -->
-  <div class="row justify-content-center mt-2">
-    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
-      <label class="form-label">Type</label>
-      <select class="form-select">
-        <option selected value="image-text">Image and Text</option>
-        <option value="image-only">Image only</option>
-        <option value="two-pages">1st page: Image, 2nd page: Text</option>
-      </select>
-    </div>
-  </div>
+      <!-- Label -->
+      <div class="row justify-content-center mt-2">
+        <div class="col-12">
+          <label class="form-label">Label</label>
+          <input class="form-control" id="flashcard-label" name="label" placeholder="Untitled"
+            onkeyup="flashcardLabelUpdate()" />
+        </div>
+      </div>
 
-  <!-- Orientation -->
-  <div class="row justify-content-center mt-2">
-    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
-      <label class="form-label">Orientation</label>
-      <select class="form-select">
-        <option selected value="portrait">Portrait</option>
-        <option value="landscape">Landscape</option>
-      </select>
-    </div>
-  </div>
+      <!-- Font -->
+      <div class="row justify-content-center mt-2">
+        <div class="col-12">
+          <label class="form-label">Font Type</label>
+          <select class="form-select" id="flashcard-font" name="font" onchange="flashcardFontUpdate()">
+            <option selected value="lined">Lined</option>
+            <option value="unlined">Unlined</option>
+          </select>
+        </div>
+      </div>
 
-  <!-- Submit -->
-  <div class="row justify-content-center">
-    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
-      <input type="submit" id="form-button" class="btn btn-outline-success" value="Generate PDF" />
-    </div>
+      <!-- Type -->
+      <div class="row justify-content-center mt-2">
+        <div class="col-12">
+          <label class="form-label">Type</label>
+          <select class="form-select" id="flashcard-type" name="type" onchange="flashcardTypeUpdate()">
+            <option selected value="image-text">Image and Text</option>
+            <option value="image-only">Image only</option>
+            <option value="text-only">Text only (If no image given, PDF will be text only)</option>
+            <option value="two-pages">1st page: Image, 2nd page: Text</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Orientation -->
+      <div class="row justify-content-center mt-2">
+        <div class="col-12">
+          <label class="form-label">Orientation</label>
+          <select class="form-select" id="flashcard-orientation" name="orientation">
+            <option selected value="portrait">Portrait</option>
+            <option value="landscape">Landscape</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div class="row justify-content-center mt-2">
+        <div class="col-12">
+          <label class="form-label">Notes</label>
+          <input class="form-control" id="flashcard-notes" name="notes" placeholder="Fruits" value="NOTESS"
+            onkeyup="flashcardLabelUpdate()" />
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="row justify-content-center">
+        <div class="col-12 mt-3 mb-5">
+          <input type="submit" id="form-button" class="btn btn-outline-success" 
+            value="Generate PDF" />
+        </div>
+      </div>
+    </form>
   </div>
-</form>
+</div>

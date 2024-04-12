@@ -11,3 +11,7 @@ HTML, CSS, Bootstrap, jQuery, ASP.NET, C#.
 ## Where are you hosting this?
 I'm hosting it for free at: Azure (Free Tier).\
 You can access the site here: https://toolfox.azurewebsites.net/
+
+## Can I give code review feedback?
+I am currently just starting out with ASP.net, so constructive feedback is very much appreciated!\
+You can send your feedback to my gmail, kiefer.yap, with the title, "[Feedback] Toolfox"

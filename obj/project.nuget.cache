@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "FbbkJpBid3VaUmI5VdPOfL4oO96p0kF1LWqDE5OvGHsE7tXCkLiNJNk08jGCOY0XSXESIR2EHb27vPQSJsUTYg==",
+  "dgSpecHash": "c0JtVVnFIJ+d6DekT54dMs8P1hD18+99JCYWEg1lMADAbLAW1VAw0oesdh2SllqDYAGWdBrb81qiI5NXZxJPfA==",
   "success": true,
   "projectFilePath": "D:\\dragonite-files\\code\\toolfox\\toolfox\\toolfox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rkai\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\rkai\\.nuget\\packages\\harfbuzzsharp\\2.6.1.9\\harfbuzzsharp.2.6.1.9.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
@@ -52,10 +53,13 @@
     "C:\\Users\\rkai\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\rkai\\.nuget\\packages\\questpdf\\2202.8.2\\questpdf.2202.8.2.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\rkai\\.nuget\\packages\\skiasharp\\2.80.4\\skiasharp.2.80.4.nupkg.sha512",
+    "C:\\Users\\rkai\\.nuget\\packages\\skiasharp.harfbuzz\\2.80.4\\skiasharp.harfbuzz.2.80.4.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
@@ -65,11 +69,6 @@
     "C:\\Users\\rkai\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
-    "C:\\Users\\rkai\\.nuget\\packages\\syncfusion.compression.base\\25.1.39\\syncfusion.compression.base.25.1.39.nupkg.sha512",
-    "C:\\Users\\rkai\\.nuget\\packages\\syncfusion.compression.net.core\\25.1.39\\syncfusion.compression.net.core.25.1.39.nupkg.sha512",
-    "C:\\Users\\rkai\\.nuget\\packages\\syncfusion.licensing\\25.1.39\\syncfusion.licensing.25.1.39.nupkg.sha512",
-    "C:\\Users\\rkai\\.nuget\\packages\\syncfusion.pdf.net.core\\25.1.39\\syncfusion.pdf.net.core.25.1.39.nupkg.sha512",
-    "C:\\Users\\rkai\\.nuget\\packages\\syncfusion.pdf.winforms\\25.1.39\\syncfusion.pdf.winforms.25.1.39.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
@@ -105,26 +104,5 @@
     "C:\\Users\\rkai\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\rkai\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Syncfusion.Compression.Base 25.1.39' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Syncfusion.Compression.Base",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Syncfusion.Pdf.WinForms 25.1.39' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Syncfusion.Pdf.WinForms",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }
