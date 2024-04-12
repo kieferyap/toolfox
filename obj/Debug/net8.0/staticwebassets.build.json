@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ynni9MnYLTPNZbRdLiln1LM3zEVfw4/RyL2W2FQSxP0=",
+  "Hash": "TGnjfZaI8M7QWK9H1U1p0ELnyJ4ErNLGJPRTTtHPfPE=",
   "Source": "toolfox",
   "BasePath": "_content/toolfox",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\images\\toolfox.png",
+      "SourceId": "toolfox",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\",
+      "BasePath": "_content/toolfox",
+      "RelativePath": "images/toolfox.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\toolfox.png"
     },
     {
       "Identity": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\js\\site.js",
