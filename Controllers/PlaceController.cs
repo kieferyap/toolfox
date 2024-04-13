@@ -12,8 +12,8 @@ public class PlaceController : Controller
 
   private readonly IConfiguration _configuration;
 
-  private readonly IUnitOfwork _unitOfwork;
-  IRepository<PlaceModel> placeRepository;
+  private readonly IUnitOfwork? _unitOfwork;
+  IRepository<PlaceModel>? placeRepository;
 
   public PlaceController(ILogger<PlaceController> logger, IConfiguration configuration)
   {
@@ -25,8 +25,8 @@ public class PlaceController : Controller
   {
     // View() matches the name of the function, that is, "Index"...
     // ...to the filename within Views, that is, "Index.cshtml"
-    var flashcardListViewModel = GetAllPlaces();
-    return View(flashcardListViewModel);
+    var placeListViewModel = GetAllPlaces();
+    return View(placeListViewModel);
   }
 
   public IActionResult New()
@@ -139,7 +139,7 @@ public class PlaceController : Controller
 
   internal PlaceViewModel GetAllPlaces()
   {
-    List<PlaceModel> flashcardList = new();
+    List<PlaceModel> placeList = new();
 
     // Connect to the DB
     using (SqliteConnection connection = new SqliteConnection(_configuration.GetConnectionString("ToolfoxDataContext")))
@@ -154,7 +154,7 @@ public class PlaceController : Controller
           // If there are rows, stuff it into the list
           if (reader.HasRows) {
             while (reader.Read()) {
-              flashcardList.Add(
+              placeList.Add(
                 new PlaceModel {
                   Id = reader.GetInt32(0),
                   Title = reader.GetString(1),
@@ -168,7 +168,7 @@ public class PlaceController : Controller
             }
           } else {
             return new PlaceViewModel {
-              PlaceList = flashcardList
+              PlaceList = placeList
             };
           }
         }
@@ -177,7 +177,7 @@ public class PlaceController : Controller
 
     return new PlaceViewModel
     {
-      PlaceList = flashcardList
+      PlaceList = placeList
     };
   }
 

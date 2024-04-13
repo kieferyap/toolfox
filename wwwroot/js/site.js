@@ -36,7 +36,7 @@ function flashcardImageUpdate()
 
   if (flashcardDataUrlFile != null) {
     $('#preview-flashcard-image').attr('class', 'd-block justify-content-center');
-    $('#flashcard-image-data-url').attr('value', flashcardDataUrlFile);
+    // $('#flashcard-image-data-url').attr('value', flashcardDataUrlFile);
     $('#preview-flashcard-image-none').attr('class', 'd-none');
     $('#preview-flashcard-image-sm').attr('src', flashcardDataUrlFile);
     $('#preview-flashcard-image-md').attr('src', flashcardDataUrlFile);
@@ -75,52 +75,14 @@ function flashcardTypeUpdate()
   }
 }
 
-// Calls an API to generate the PDF
-function flashcardGeneratePdf()
+function disableButtonSeconds(seconds, buttonSelector, formSelector)
 {
-  flashcardImageFile = $('#flashcard-image').prop('files');
-  if (flashcardImageFile.length) {
-    flashcardDataUrlFile = window.URL.createObjectURL(flashcardImageFile[0]);
-  }
-  flashcardLabel = $('#flashcard-label').val();
-  flashcardFont = $('#flashcard-font').val();
-  flashcardType = $('#flashcard-type').val();
-  flashcardNotes = $('#flashcard-notes').val();
-  flashcardOrientation = $('#flashcard-orientation').val();
-
-  // Show error if certain fields are blank
-  window.location = '/Flashcard/Generate'
-  /*console.log('flashcardGeneratePdf');
-  $.ajax({
-    url: '/Flashcard/Generate',
-    type: 'POST',
-    data: {
-      image: flashcardDataUrlFile,
-      label: flashcardLabel,
-      font: flashcardFont,
-      type: flashcardType,
-      notes: flashcardNotes,
-      orientation: flashcardOrientation,
-    }
-  }).then(function(data) {
-    window.location = data;
-    // // console.log(data);
-    // var blob = new Blob([data], { type: "application/pdf" });
-    // var filename = "download-" + $.now();
-    
-    // //Check the Browser type and download the File.
-    // var isIE = false || !!document.documentMode;
-    // if (isIE) {
-    //     window.navigator.msSaveBlob(blob, filename);
-    // } else {
-    //     var url = window.URL.createObjectURL(blob);
-    //     console.log(url)
-    //     var a = document.createElement("a");
-    //     document.body.appendChild(a);
-    //     a.href = url;
-    //     a.download = data.name || filename;
-    //     a.click();
-    //     $("body").remove(a);
-    // }
-  })*/
+  var buttonOriginalText = $(buttonSelector).val();
+  $(buttonSelector).attr('disabled', true);
+  $(buttonSelector).val('Loading...');
+  $(formSelector)[0].submit();
+  setTimeout(function (){
+    $(buttonSelector).val(buttonOriginalText);
+    $(buttonSelector).attr('disabled', false);
+  }, seconds * 1000); 
 }
