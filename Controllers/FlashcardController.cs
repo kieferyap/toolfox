@@ -35,12 +35,16 @@ public class FlashcardController : Controller
         PageSize pageSize = orientation == "portrait" ? PageSizes.A4.Portrait() : PageSizes.A4.Landscape();
         int maxImageHeight = orientation == "portrait" ? 500 : 325;
         int labelFontSize = orientation == "portrait" ? 60 : 40;
+        string fontFile = font == "lined" ? "wwwroot/fonts/nara-penmanship-lined.ttf" : "wwwroot/fonts/we-can-unlined.otf";
+        string fontName = font == "lined" ? "Nara Penmanship Line P" : "HandwritingWeCan";
 
         Document document = Document.Create(container =>
         {
             container.Page(page =>
             {
                 // Font setup
+                // TODO: Use the wwwroot/fonts folder
+                FontManager.RegisterFont(System.IO.File.OpenRead(fontFile));
 
                 // Page setup
                 page.Size(pageSize);
@@ -77,7 +81,7 @@ public class FlashcardController : Controller
                     .PaddingVertical(1, Unit.Centimetre)
                     .Column(x =>
                     {
-                        x.Item().Text(label).FontSize(labelFontSize);
+                        x.Item().Text(label).FontSize(labelFontSize).FontFamily(fontName);
                     });
 
                 // Notes
