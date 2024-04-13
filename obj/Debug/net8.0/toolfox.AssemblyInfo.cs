@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("toolfox")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a183af80399223e37d0f648a0d6e5057ae622b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2874d0054587b7301fc7e31ff5dfdf3645ec536")]
 [assembly: System.Reflection.AssemblyProductAttribute("toolfox")]
 [assembly: System.Reflection.AssemblyTitleAttribute("toolfox")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,6 +9,7 @@ using System.IO;
 using Microsoft.Extensions.Primitives;
 using QuestPDF.Drawing;
 using HarfBuzzSharp;
+using System.Net;
 
 namespace toolfox.Controllers;
 
@@ -29,48 +30,61 @@ public class FlashcardController : Controller
     }
 
     [HttpPost]
-    public IActionResult Generate(string image)
+    public IActionResult Generate(IFormFile image, string label, string font, string type, string orientation, string notes)
     {
-        string imageUrl = Request.Form["imageurl"];
-        string imageFilename = Request.Form["image"];
-        string label = Request.Form["label"];
-        string font = Request.Form["font"];
-        string type = Request.Form["type"];
-        string orientation = Request.Form["orientation"];
-        string notes = Request.Form["notes"];
+        PageSize pageSize = orientation == "portrait" ? PageSizes.A4.Portrait() : PageSizes.A4.Landscape();
+        int maxImageHeight = orientation == "portrait" ? 500 : 325;
+        int labelFontSize = orientation == "portrait" ? 60 : 40;
 
         Document document = Document.Create(container =>
         {
             container.Page(page =>
             {
                 // Font setup
-                
+
                 // Page setup
-                page.Size(PageSizes.A4);
+                page.Size(pageSize);
                 page.Margin(2, Unit.Centimetre);
                 page.PageColor(Colors.White);
                 page.DefaultTextStyle(x => x.FontSize(20));
-                // page.Header()
-                //     .Text("Hello PDF!")
-                //     .SemiBold().FontSize(36).FontColor(Colors.Blue.Medium);
 
+                // Image
+                page.Header()
+                    .AlignMiddle()
+                    .AlignCenter()
+                    .MaxHeight(maxImageHeight)
+                    .Column(x =>
+                    {
+                        if (image != null) {
+                            long fileSize = image.Length;
+                            string fileType = image.ContentType;
+                            if (fileSize > 0)
+                            {
+                                using (var stream = new MemoryStream())
+                                {
+                                    image.CopyTo(stream);
+                                    var bytes = stream.ToArray();
+                                    x.Item().Image(bytes, ImageScaling.FitArea);
+                                }
+                            }
+                        }
+                    });
+
+                // Label
                 page.Content()
+                    .AlignCenter()
+                    .AlignBottom()
                     .PaddingVertical(1, Unit.Centimetre)
                     .Column(x =>
                     {
-                        x.Spacing(20);
-
-                        // x.Item().Image(Placeholders.Image(200, 100));
-                        x.Item().Text(label);
+                        x.Item().Text(label).FontSize(labelFontSize);
                     });
 
-                // page.Footer()
-                //     .AlignCenter()
-                //     .Text(x =>
-                //     {
-                //         x.Span("Page ");
-                //         x.CurrentPageNumber();
-                //     });
+                // Notes
+                page.Footer()
+                    .AlignCenter()
+                    .Text(notes)
+                    .FontSize(15).FontColor(Colors.Grey.Medium);
             });
         });
         byte[] pdfBytes = document.GeneratePdf();

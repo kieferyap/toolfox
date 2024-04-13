@@ -4,7 +4,7 @@
 
 <div class="text-center">
   <h1 class="display-4">Flashcard Generator</h1>
-  <p>A tool to generate flashcards for ALTs and English teachers. <br/> Frontend is done but Backend is still a WIP and can only output the label.</p>
+  <p>A tool to generate flashcards for ALTs and English teachers. <br/> Frontend is done but Backend is still a WIP.</p>
 </div>
 
 <div class="row mt-5">
@@ -27,12 +27,12 @@
 
   <!-- Flashcard input form -->
   <div class="col-xl-6 col-lg-6 col-sm-12">
-    <form asp-action="Generate" method="post" id="form-action" class="form-horizontal" role="form">
+    <form asp-action="Generate" method="post" id="form-flashcard" class="form-horizontal" role="form" enctype="multipart/form-data">
       <!-- Image -->
       <div class="row justify-content-center">
         <div class="col-12">
           <label class="form-label">Image</label>
-          <input class="form-control d-none" id="flashcard-image-data-url" name="imageurl" placeholder="imageurl" />
+          @* <input class="form-control d-none" id="flashcard-image-data-url" name="imageurl" placeholder="imageurl" /> *@
           <input class="form-control" type="file" accept="image/png, image/jpeg, image/jpg" id="flashcard-image" name="image" onchange="flashcardImageUpdate()">
         </div>
       </div>
@@ -41,7 +41,7 @@
       <div class="row justify-content-center mt-2">
         <div class="col-12">
           <label class="form-label">Label</label>
-          <input class="form-control" id="flashcard-label" name="label" placeholder="Untitled"
+          <input class="form-control" id="flashcard-label" name="label" placeholder="Untitled" value="Dragon"
             onkeyup="flashcardLabelUpdate()" />
         </div>
       </div>
@@ -85,7 +85,7 @@
       <div class="row justify-content-center mt-2">
         <div class="col-12">
           <label class="form-label">Notes</label>
-          <input class="form-control" id="flashcard-notes" name="notes" placeholder="Fruits" value="NOTESS"
+          <input class="form-control" id="flashcard-notes" name="notes" placeholder="Fruits" value="Animals"
             onkeyup="flashcardLabelUpdate()" />
         </div>
       </div>
@@ -93,7 +93,7 @@
       <!-- Submit -->
       <div class="row justify-content-center">
         <div class="col-12 mt-3 mb-5">
-          <input type="submit" id="form-button" class="btn btn-outline-success" 
+          <input type="submit" id="form-button" class="btn btn-outline-success" onclick="disableButtonSeconds(3, '#form-button', '#form-flashcard')" 
             value="Generate PDF" />
         </div>
       </div>
