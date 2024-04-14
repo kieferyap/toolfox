@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\fonts\\we-can-unlined.otf"
     },
     {
+      "Id": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\images\\about-flashcard-01.png",
+      "PackagePath": "staticwebassets\\images\\about-flashcard-01.png"
+    },
+    {
       "Id": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\images\\no-image.png",
       "PackagePath": "staticwebassets\\images\\no-image.png"
     },

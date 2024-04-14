@@ -4,7 +4,7 @@
 
 <div class="text-center">
   <h1 class="display-4">Flashcard Generator</h1>
-  <p>A tool to generate flashcards for ALTs and English teachers. <br/> Frontend is done but Backend is still a WIP.</p>
+  <p>A tool to generate flashcards for ALTs and English teachers.</p>
 </div>
 
 <div class="row mt-5">
@@ -32,7 +32,6 @@
       <div class="row justify-content-center">
         <div class="col-12">
           <label class="form-label">Image</label>
-          @* <input class="form-control d-none" id="flashcard-image-data-url" name="imageurl" placeholder="imageurl" /> *@
           <input class="form-control" type="file" accept="image/png, image/jpeg, image/jpg" id="flashcard-image" name="image" onchange="flashcardImageUpdate()">
         </div>
       </div>
@@ -41,7 +40,7 @@
       <div class="row justify-content-center mt-2">
         <div class="col-12">
           <label class="form-label">Label</label>
-          <input class="form-control" id="flashcard-label" name="label" placeholder="Untitled" value="Dragon"
+          <input class="form-control" id="flashcard-label" name="label" placeholder="Untitled"
             onkeyup="flashcardLabelUpdate()" />
         </div>
       </div>
@@ -85,7 +84,7 @@
       <div class="row justify-content-center mt-2">
         <div class="col-12">
           <label class="form-label">Notes</label>
-          <input class="form-control" id="flashcard-notes" name="notes" placeholder="Fruits" value="Animals"
+          <input class="form-control" id="flashcard-notes" name="notes" placeholder="Fruits"
             onkeyup="flashcardLabelUpdate()" />
         </div>
       </div>
