@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9mFKYCm+xDYnqQ8eoGJnmn6AUCHfPzH04gvk2y0GcM4=",
+  "Hash": "Wk6XMVafLbSkM7FY3FhwbxYS8gaiIZ+I1rUbECVjXEA=",
   "Source": "toolfox",
   "BasePath": "_content/toolfox",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\fonts\\we-can-unlined.otf"
+    },
+    {
+      "Identity": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\images\\about-flashcard-01.png",
+      "SourceId": "toolfox",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\",
+      "BasePath": "_content/toolfox",
+      "RelativePath": "images/about-flashcard-01.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\about-flashcard-01.png"
     },
     {
       "Identity": "D:\\dragonite-files\\code\\toolfox\\toolfox\\wwwroot\\images\\no-image.png",
