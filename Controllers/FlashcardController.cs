@@ -78,9 +78,6 @@ public class FlashcardController : Controller
             fontName = "HandwritingWeCan";
         }
 
-        Console.WriteLine("maxImageHeight");
-        Console.WriteLine(maxImageHeight);
-
         Document document = Document.Create(container =>
         {
             container.Page(page =>
@@ -161,7 +158,7 @@ public class FlashcardController : Controller
         MemoryStream ms = new MemoryStream(pdfBytes);
 
         FileStreamResult fileStreamResult = new FileStreamResult(ms, "application/pdf");
-        fileStreamResult.FileDownloadName = "Sample.pdf";
+        fileStreamResult.FileDownloadName = "toolfox-flashcard-"+DateTime.Now.ToString("yyyyMMdd-HHmmss")+".pdf";
         return fileStreamResult;
     }
 
